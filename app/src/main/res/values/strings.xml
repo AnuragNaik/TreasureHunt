@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Treasure Hunt</string>
+    <string name="action_settings">Settings</string>
+    <string name="content_main_generate_qr_text">Generate QR code</string>
+    <string name="content_main_scan_qr_text">Scan QR code</string>
+    <string name="title_activity_scanner">ScannerActivity</string>
+</resources>

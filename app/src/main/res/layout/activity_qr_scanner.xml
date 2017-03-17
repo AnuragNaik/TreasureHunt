@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_qr_scanner"
+    android:background="@drawable/old_world_map_stock_photo"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_margin="6dp"
+        android:layout_weight=".5"
+        >
+
+        <TextView
+            android:id="@+id/content_main_scan_qr_output_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".8"
+            android:background="@drawable/border_textview"
+            android:maxLines="7"
+            android:scrollbars="vertical"
+            android:textStyle="bold|italic"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Your hint will be coming here after scan!"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:textIsSelectable="true"/>
+
+        <Button
+            android:id="@+id/content_main_scan_qr_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:fontFamily="sans-serif-condensed"
+            android:background="@drawable/border_edit_text"
+            android:onClick="scan_qr_button_onClick"
+            android:padding="14dp"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            android:text="@string/content_main_scan_qr_text"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight=".4"
+        android:gravity="center"
+        >
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:hint="Enter Admin password"
+            android:textColorHint="@color/black"
+            android:inputType="numberPassword"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="italic"
+            android:fontFamily="sans-serif-condensed"
+            android:background="@drawable/highlighted_box"
+            android:padding="10dp"
+            />
+
+        <Button
+            android:background="@drawable/border_edit_text"
+            android:padding="14dp"
+            android:textStyle="italic"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Approve"
+            android:id="@+id/proceed_admin"/>
+
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/see_progress"
+            android:id="@+id/see_progress"
+            android:layout_gravity="center_horizontal"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>
